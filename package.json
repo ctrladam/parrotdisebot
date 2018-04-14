@@ -1,0 +1,8 @@
+{
+  "name": "parrotdise",
+  "version": "1.0.0",
+  "description": "ParrotDise szerver infó",
+  "main": "bot.js",
+  "author": "SIKUDM",
+  "dependencies": {}
+}
