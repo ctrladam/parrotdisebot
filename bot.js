@@ -3,7 +3,7 @@ const client = new Discord.Client();
 client.login('NDM0NzU5NDg0NzM3MzIzMDM4.DbPE4g.L_uqMNQgx_NrUbcuQx4ulMDIMaQ');
 
 var request = require('request');
-var mcCommand = '/minecraft'; // Command for triggering
+var mcCommand = '/pds'; // Command for triggering
 var mcIP = '84.3.203.150'; // Your MC server IP
 var mcPort = 4444; // Your MC server port
 
@@ -16,9 +16,9 @@ client.on('message', message => {
                 return message.reply('Sikertelen lekérdezés...');
             }
             body = JSON.parse(body);
-            var status = '*ParrotDise jelenleg offline*';
+            var status = '_PDstátusz:_ *ParrotDise jelenleg offline*';
             if(body.online) {
-                status = '**ParrotDise** jelenleg **online**  -  ';
+                status = '_PDstátusz:_ **ParrotDise** jelenleg **online**  -  ';
                 if(body.players.now) {
                     status += '**' + body.players.now + '** játékos van fent!';
                 } else {
