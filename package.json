@@ -1,8 +1,13 @@
 {
   "name": "parrotdise",
+  "description": "ParrotDise szerver infÃ³",
   "version": "1.0.0",
-  "description": "ParrotDise szerver infó",
   "main": "bot.js",
-  "author": "SIKUDM",
-  "dependencies": {}
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "11.1.0",
+    "request": "2.81.0"
+  }
 }
