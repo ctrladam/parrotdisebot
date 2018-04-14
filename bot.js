@@ -3,7 +3,7 @@ const client = new Discord.Client();
 client.login('NDM0NzU5NDg0NzM3MzIzMDM4.DbPE4g.L_uqMNQgx_NrUbcuQx4ulMDIMaQ');
 
 var request = require('request');
-var mcCommand = '/mc'; // Command for triggering
+var mcCommand = '/minecraft'; // Command for triggering
 var mcIP = '84.3.203.150'; // Your MC server IP
 var mcPort = 4444; // Your MC server port
 
@@ -13,16 +13,16 @@ client.on('message', message => {
         request(url, function(err, response, body) {
             if(err) {
                 console.log(err);
-                return message.reply('Sikertelen kapcsolódás...');
+                return message.reply('Error getting Minecraft server status...');
             }
             body = JSON.parse(body);
-            var status = '*A szerver jelenleg offline*';
+            var status = '*Minecraft server is currently offline*';
             if(body.online) {
-                status = '**Minecraft** szerver **online**  -  ';
+                status = '**Minecraft** server is **online**  -  ';
                 if(body.players.now) {
-                    status += '**' + body.players.now + '** játékos van a szerveren';
+                    status += '**' + body.players.now + '** people are playing!';
                 } else {
-                    status += '*Senki sincs a szerveren!*';
+                    status += '*Nobody is playing!*';
                 }
             }
             message.reply(status);
