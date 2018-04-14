@@ -13,16 +13,16 @@ client.on('message', message => {
         request(url, function(err, response, body) {
             if(err) {
                 console.log(err);
-                return message.reply('Error getting Minecraft server status...');
+                return message.reply('Sikertelen lekérdezés...');
             }
             body = JSON.parse(body);
-            var status = '*Minecraft server is currently offline*';
+            var status = '*ParrotDise jelenleg offline*';
             if(body.online) {
-                status = '**Minecraft** server is **online**  -  ';
+                status = '**ParrotDise** jelenleg **online**  -  ';
                 if(body.players.now) {
-                    status += '**' + body.players.now + '** people are playing!';
+                    status += '**' + body.players.now + '** játékos van fent!';
                 } else {
-                    status += '*Nobody is playing!*';
+                    status += '*Senki sincs fent!*';
                 }
             }
             message.reply(status);
