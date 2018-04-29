@@ -16,7 +16,7 @@ client.on('message', message => {
                 return message.reply('`Oops. Sikertelen lekérdezés, próbáld újra később!`');
             }
             body = JSON.parse(body);
-            var status = '`*ParrotDise* jelenleg *offline*`';
+            var status = '` = *ParrotDise* = jelenleg = *offline* = `';
             if(body.online) {
                 status = '`**ParrotDise** jelenleg **online**  -  `';
                 if(body.players.now) {
