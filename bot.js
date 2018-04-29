@@ -13,18 +13,16 @@ client.on('message', message => {
         request(url, function(err, response, body) {
             if(err) {
                 console.log(err);
-                return message.reply('```css
-                                         Oops. Sikertelen lekérdezés, próbáld újra később!```');
+                return message.reply('` Oops. Sikertelen lekérdezés, próbáld újra később! `');
             }
             body = JSON.parse(body);
-            var status = '```css
-                                     ParrotDise* = jelenleg = *offline* ```';
+            var status = '` ParrotDise jelenleg offline `';
             if(body.online) {
-                status = '`**ParrotDise** jelenleg **online**  -  `';
+                status = '` ParrotDise jelenleg online  -  `';
                 if(body.players.now) {
                     status += '**' + body.players.now + '** játékos van fent!';
                 } else {
-                    status += '*Senki sincs fent!*';
+                    status += 'Senki sincs fent!';
                 }
             }
             message.reply(status);
