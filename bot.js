@@ -16,7 +16,7 @@ client.on('message', message => {
                 return message.reply('Sikertelen lekérdezés...');
             }
             body = JSON.parse(body);
-            var status = '_PDstátusz:_ *ParrotDise jelenleg offline*';
+            var status = ''_PDstátusz:_ *ParrotDise jelenleg offline*'';
             if(body.online) {
                 status = '_PDstátusz:_ **ParrotDise** jelenleg **online**  -  ';
                 if(body.players.now) {
