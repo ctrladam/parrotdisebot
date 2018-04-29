@@ -13,12 +13,12 @@ client.on('message', message => {
         request(url, function(err, response, body) {
             if(err) {
                 console.log(err);
-                return message.reply('Sikertelen lekérdezés...');
+                return message.reply('`Oops. Sikertelen lekérdezés, próbáld újra később!`');
             }
             body = JSON.parse(body);
-            var status = ''_PDstátusz:_ *ParrotDise jelenleg offline*'';
+            var status = '`*ParrotDise* jelenleg *offline*`';
             if(body.online) {
-                status = '_PDstátusz:_ **ParrotDise** jelenleg **online**  -  ';
+                status = '`**ParrotDise** jelenleg **online**  -  `';
                 if(body.players.now) {
                     status += '**' + body.players.now + '** játékos van fent!';
                 } else {
