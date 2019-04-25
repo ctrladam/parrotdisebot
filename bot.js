@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-client.login('NDM0NzU5NDg0NzM3MzIzMDM4.DbPE4g.L_uqMNQgx_NrUbcuQx4ulMDIMaQ');
+client.login('Bh711nlHvGK8V3vwsV1w_LCCQHXmkfvO');
 
 var request = require('request');
 var mcCommand = '/pds'; // Command for triggering
